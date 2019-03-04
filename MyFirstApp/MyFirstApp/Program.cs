@@ -6,16 +6,37 @@ using System.Threading.Tasks;
 
 namespace MyFirstApp
 {
-    class Program
+    class program 
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            Fruit[] fruits = new Fruit[15];
+        
+            string nev;
+            string szarmazasihely;
+            int mennyiseg;
+            int gyszam;
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            Console.Write("kérem a gyszam számát");
+                gyszam = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < gyszam; i++)
+            {
+
+                Console.Write("kérem a(z) {0}. gyumolcs nevet:", i + 1);
+                nev = Console.ReadLine();
+                Console.Write("kérem a(z) {0}. szarmazasihelyet:", i + 1);
+                szarmazasihely = Console.ReadLine();
+                Console.Write("kérem a(z) {0}. mennyiseg számát;", i + 1);
+                mennyiseg = int.Parse(Console.ReadLine());
+                //konstruktor hivasa
+                fruits[i] =new Fruit(nev, szarmazasihely, mennyiseg);
+
+            }
+
+                Console.ReadKey();
+
+             
         }
     }
 }

@@ -17,7 +17,7 @@ namespace MyFirstApp
             nev = anev;
             szarmazasihely = aszarmazasihely;
             mennyiseg = amennyiseg;
-            
+            Console.WriteLine("DEBUG:fruit()konstruktor meghivas");
 
         }
     }

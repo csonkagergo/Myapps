@@ -10,12 +10,13 @@ namespace MyFirstApp
     {
         static void Main(string[] args)
         {
-            Fruit[] fruits = new Fruit[15];
+            var fruits = new List<Fruit>();
         
             string nev;
             string szarmazasihely;
             int mennyiseg;
             int gyszam;
+            int osszmenny = 0;
 
             Console.Write("kérem a gyszam számát");
                 gyszam = int.Parse(Console.ReadLine());
@@ -29,11 +30,13 @@ namespace MyFirstApp
                 szarmazasihely = Console.ReadLine();
                 Console.Write("kérem a(z) {0}. mennyiseg számát;", i + 1);
                 mennyiseg = int.Parse(Console.ReadLine());
+
+                osszmenny += mennyiseg;
                 //konstruktor hivasa
-                fruits[i] =new Fruit(nev, szarmazasihely, mennyiseg);
+                fruits.Add(new Fruit(nev, szarmazasihely, mennyiseg));
 
             }
-
+            Console.WriteLine("gyumolcsok osszes mennyisege:" + osszmenny);
                 Console.ReadKey();
 
              

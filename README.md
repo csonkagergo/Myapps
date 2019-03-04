@@ -10,4 +10,7 @@
  #kulonleges metodus az osztalyon belül ? neve kontruktor
 
   public Fruit()string a nev,a szhely,int amenny)
+  {
+  }
+  #feladat:szamoljuk meg a gyümolcsok mennyiseget
  

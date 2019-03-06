@@ -10,94 +10,48 @@ namespace kpo
     {
         static void Main(string[] args)
         {
-            ///
-            ///program: kő papír olló játék leprogramozása
-            ///adott: számítógép -véletlenszerűen választ kpo
-            ///írta:Csonka Gergő /2019.03.06
-            ///játékos: billentyűzet választ
-            ///megoldandó feladat 1:
-            ///ciklus programfutás ,amíg a felhasználó szeretne játszani
-            bool moreGame = true;
-            Random r = new Random();
-            /// feladat2:változók létrehozása
-
-
-
-            string compChoice = "";
-            string playerChoice = "";
-
-            int compScore = 0;
-            int playerScore = 0;
-
-
-
-            Console.WriteLine(" kő,papír,olló");
-            do
-            {
-                ///feladat 3:
-                ///játékos választsának megkérdezése és tárolása
-                Console.WriteLine("te mit választasz?k-p-o");
-
+           do
+            
                 switch (Console.ReadKey(true).KeyChar)
                 {
-                    case 'k':
-                        playerChoice = "kő";
+                    case '0':
+                        Console.WriteLine("szám");
                         break;
-                    case 'p':
-                        playerChoice = "papír";
+                    case '1':
+                        Console.WriteLine("szám"); ;
                         break;
-                    case 'o':
-                        playerChoice = "olló";
+                    case '2':
+                        Console.WriteLine("szám"); ;
                         break;
-                }
-                ///feladat 4:
-                ///számítógép választásának kérdése:Random()
-                switch (r.Next(0, 3))
-                {
-                    case 0:
-                        compChoice = "kő";
+                    case '3':
+                        Console.WriteLine("szám");
                         break;
-                    case 1:
-                        compChoice = " papír";
+                    case '4':
+                        Console.WriteLine("szám"); ;
                         break;
-                    case 2:
-                        compChoice = "olló";
+                    case '5':
+                        Console.WriteLine("szám"); ;
                         break;
-                }
-                ///Feladat 5: értékeljük ki a compChoice es a playerChoice
-                ///változókat
+                    case '6':
+                        Console.WriteLine("szám");
+                        break;
+                    case '7':
+                        Console.WriteLine("szám"); ;
+                        break;
+                    case '8':
+                        Console.WriteLine("szám"); ;
+                        break;
+                    case '9':
+                        Console.WriteLine("szám");
+                        break;
 
-                if (
-                    (playerChoice == "kő" && compChoice == "papir") ||
-                    (playerChoice == "papír" && compChoice == "olló") ||
-                    (playerChoice == "olló" && compChoice == "kő")
-                    )
-                { Console.WriteLine("számítógép:" + compChoice + "te" + playerChoice);
-                    Console.WriteLine("veszitettél! Állás:Szg{0} játékos:{1}", ++compScore, playerScore);
-                }
-                else if (playerChoice == compChoice)
-                {
-                    Console.WriteLine("számítógép:" + compChoice + "te" + playerChoice);
-                    Console.WriteLine("Döntetlen! Állás:Szg{0} játékos:{1}", compScore, playerScore);
-                }
-                else
-                {
-                    Console.WriteLine("számítógép:" + compChoice + "te" + playerChoice);
-                    Console.WriteLine("Nyertél! Állás:Szg{0} játékos:{1}", compScore, ++playerScore);
-                }
-
-                    Console.Write("akarsz még játszani? i/n");
-                if (Console.ReadKey(true).KeyChar == 'n')
-                {
-                    moreGame = false;
-                }
-
-                }while (moreGame);
-
-
-
-            Console.ReadKey();
-
+                        Console.WriteLine("szám");
+                        break;
+                    default:
+                        Console.WriteLine("egyéb");
+                        break;
+                      
+                }while (true) ;
              
         }
     }

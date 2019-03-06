@@ -18,7 +18,10 @@ namespace kpo
             ///megoldandó feladat 1:
             ///ciklus programfutás ,amíg a felhasználó szeretne játszani
             bool moreGame = true;
+            Random r = new Random();
             /// feladat2:változók létrehozása
+
+
 
             string compChoice = "";
             string playerChoice = "";
@@ -47,7 +50,23 @@ namespace kpo
                         playerChoice = "olló";
                         break;
                 }
-
+                ///feladat 4:
+                ///számítógép választásának kérdése:Random()
+                switch (r.Next(0, 3))
+                {
+                    case 0:
+                        compChoice = "kő";
+                        break;
+                    case 1:
+                        compChoice = " papír";
+                        break;
+                    case 2:
+                        compChoice = "olló";
+                        break;
+                }
+                ///Feladat 5: értékeljük ki a compChoice es a playerChoice
+                ///változókat
+                ///
                 Console.Write("akarsz még játszani? i/n");
                 if (Console.ReadKey(true).KeyChar == 'n')
                 {

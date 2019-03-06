@@ -70,7 +70,7 @@ namespace kpo
                 if (
                     (playerChoice == "kő" && compChoice == "papir") ||
                     (playerChoice == "papír" && compChoice == "olló") ||
-                    (playerChoice == "olló" && compChoice == "kő") ||
+                    (playerChoice == "olló" && compChoice == "kő")
                     )
                 { Console.WriteLine("számítógép:" + compChoice + "te" + playerChoice);
                     Console.WriteLine("veszitettél! Állás:Szg{0} játékos:{1}", ++compScore, playerScore);

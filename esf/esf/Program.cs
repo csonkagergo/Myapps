@@ -14,6 +14,11 @@ namespace esf
             Exercise ex = new Exercise("Csonka Gergő");
 
             //ex.Name = "Csonka Gergő";
+            ///
+
+
+            ///
+
 
             Console.WriteLine(ex.Name);
 

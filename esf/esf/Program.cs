@@ -42,8 +42,39 @@ namespace esf
                 v--;
             } while (v > 0);
 
+            //elágazások
+            v = 2;
+            if (v==2)
+            {
+                Console.WriteLine("A v értéke egyenlő 2 al");
+            }
+             else if(v==3)
+            {
+                Console.WriteLine("A v értéke egyenlő 3 al");
+            }
+            else
+            {
+                Console.WriteLine(" v nem és nem 3, hanem"+ v );
+            }
+            v = 5;
+            switch (v)
+            {
+                case 0:
+                    Console.WriteLine("switch:" + v);
+                    break;
+                          
+            
+           
+                case 5:
+                    Console.WriteLine("switch:" + v);
+                break;
+                    
+                default:
+                    Console.WriteLine("switch default:" + v);
+                    break;
 
-
+            
+        }
             Console.ReadKey();
 
              

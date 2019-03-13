@@ -13,4 +13,11 @@
   {
   }
   #feladat:szamoljuk meg a gyümolcsok mennyiseget
- 
+ ### 2.feladat
+
+
+
+
+
+ ### ismétlés 
+ osztály létrehozása egy string adattaaggal

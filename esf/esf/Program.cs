@@ -11,6 +11,7 @@ namespace esf
         static void Main(string[] args)
         {
             int v = 0;
+            string S;
             Exercise ex = new Exercise("Csonka Gergő");
 
             //ex.Name = "Csonka Gergő";
@@ -72,9 +73,9 @@ namespace esf
                 default:
                     Console.WriteLine("switch default:" + v);
                     break;
-
-            
-        }
+                    //beolvasás konzolról
+                    s = Console.ReadLine();
+        }Console.WriteLine("beolvasás konzolról" + S);
             Console.ReadKey();
 
              

@@ -12,6 +12,11 @@ namespace esf
         {
             int v = 0;
             string S;
+
+            bool moreBook = true;
+
+            int iPage;
+            string sAuthor, sName;
             Exercise ex = new Exercise("Csonka Gergő");
 
             //ex.Name = "Csonka Gergő";
@@ -74,7 +79,7 @@ namespace esf
                     Console.WriteLine("switch default:" + v);
                     break;
                     //beolvasás konzolról
-                    
+
             }
             S = Console.ReadLine();
             Console.ReadKey();
@@ -117,11 +122,51 @@ namespace esf
                 ///lista elemének törlése
                 Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
             }
-
-
             //Console.WriteLine("keressük az Oroszlánkölyköket:" + Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
 
-            Console.ReadKey();
-        }
-    }
+            //feladat:egészítsuk ki ugy a programot hogy a felhasználó lehetőséget kapjon interaktív modon a könyvtár elemeire modositasara.
+            // u betuvel bekeri a konyv cimet és oldalszamat t betuvel torles , l lista.
+        
+             
+            do
+            { 
+            Console.WriteLine("**********************************************************");
+            Console.WriteLine("lehetőség [u]:új könyv [l]listázás [t]:könyv törlése [k]:kilépés");
+            Console.WriteLine("**********************************************************");
+                switch (Console.ReadKey(true).KeyChar)
+                {
+                    case 'u':
+                        Console.Write("kérem a könyv címét:");
+                        sName = Console.ReadLine();
+                        Console.Write("kérem a könyv szerzőjét:");
+                        sAuthor = Console.ReadLine();
+                        Console.Write("kérem a lapszámot");
+                        iPage = int.Parse(Console.ReadLine());
+                        Lista.Add(new Book { Name = sName, Author = sAuthor, Page = iPage });
+                        break;
+                    case 'k':
+                        moreBook = false;
+                        break;
+                    case 't':
+                        Console.Write("kérem a könyv címét:");
+                        sName = Console.ReadLine();
+                        Lista.Remove(Lista.Find(x => x.Name.Contains(sName)));
+                        break;
+                    case '1':
+                        Console.WriteLine("könyvtár tartalma:");
+                        foreach (Book book in Lista)
+                        {
+                            Console.WriteLine("->" + book.Name + " " + book.Author + " " + book.Page);
+                        }
+                        break;
+                    
+            
+
+
+
+
+
+
+        }while (moreBook) ;
+    } 
 }

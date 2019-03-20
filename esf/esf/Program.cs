@@ -30,11 +30,11 @@ namespace esf
                 Console.WriteLine("ciklus:<Változó hivatkozás II.>{0}", i);
             }
             v = 2;
-            while(v>0)
+            while (v > 0)
             {
                 Console.WriteLine("while ciklus");
                 v--;
-                   
+
             }
             do
             {
@@ -45,17 +45,17 @@ namespace esf
 
             //elágazások
             v = 2;
-            if (v==2)
+            if (v == 2)
             {
                 Console.WriteLine("A v értéke egyenlő 2 al");
             }
-             else if(v==3)
+            else if (v == 3)
             {
                 Console.WriteLine("A v értéke egyenlő 3 al");
             }
             else
             {
-                Console.WriteLine(" v nem és nem 3, hanem"+ v );
+                Console.WriteLine(" v nem és nem 3, hanem" + v);
             }
             v = 5;
             switch (v)
@@ -63,31 +63,65 @@ namespace esf
                 case 0:
                     Console.WriteLine("switch:" + v);
                     break;
-                          
-            
-           
+
+
+
                 case 5:
                     Console.WriteLine("switch:" + v);
-                break;
-                    
+                    break;
+
                 default:
                     Console.WriteLine("switch default:" + v);
                     break;
                     //beolvasás konzolról
-                    S = Console.ReadLine();
-        }Console.WriteLine("beolvasás konzolról" + S);
+                    
+            }
+            S = Console.ReadLine();
+            Console.ReadKey();
+            Console.WriteLine("beolvasás konzolról" + S);
             int[] szamok = new int[5];
             string[] szövegek = new string[10];
 
             int[] iNums = new int[] { 1, 2, 3, 4, 5, 6 };
             ///deklaráció
             string[] sFruit = new string[] { "alma", "körte", "banán", "narancs" };
-            Console.WriteLine("iNums első eleme:{0} sFruit első eleme {1}",iNums[0],sFruit[0]);
-            Console.WriteLine("iNums első eleme:" +iNums[0]+ "sFruit első eleme: ", sFruit[0]);
+            Console.WriteLine("iNums első eleme:{0} sFruit első eleme {1}", iNums[0], sFruit[0]);
+            Console.WriteLine("iNums első eleme:" + iNums[0] + "sFruit első eleme: ", sFruit[0]);
 
             ///Tipusos listák
-            
-            
+            var Lista = new List<Book>();
+            ///új elemek hozzá adása a listához
+            ///ctr-"." ot hívjuk segítségül
+            Lista.Add(new Book() { Name = "Oroszlánkölykök", Author = "Irwin Shaw", Page = 100 });
+            Lista.Add(new Book() { Name = "Megkergetve", Author = "Margó István", Page = 200 });
+            Lista.Add(new Book() { Name = "Egri Csillagok", Author = "Gárdonyi Géza", Page = 1000 });
+            ///Lista kiiratása
+            foreach (Book book in Lista)
+            {
+                ///lista elemének törlése
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+            Console.WriteLine("**********************************************************************");
+
+            foreach (Book book in Lista)
+            {
+                ///lista elemének törlése
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+            Console.WriteLine("**********************************************************************");
+
+            Lista.Remove(Lista.Find(x => x.Name.Contains("Oroszlánkölykök")));
+            foreach (Book book in Lista)
+            {
+                ///lista elemének törlése
+                Console.WriteLine(book.Name + " " + book.Author + " " + book.Page);
+            }
+
+
+            //Console.WriteLine("keressük az Oroszlánkölyköket:" + Lista.Find(x => x.Name.Contains("Oroszlánkölykök")).Name);
+
+            Console.ReadKey();
         }
     }
 }

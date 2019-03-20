@@ -74,11 +74,20 @@ namespace esf
                     Console.WriteLine("switch default:" + v);
                     break;
                     //beolvasás konzolról
-                    s = Console.ReadLine();
+                    S = Console.ReadLine();
         }Console.WriteLine("beolvasás konzolról" + S);
-            Console.ReadKey();
+            int[] szamok = new int[5];
+            string[] szövegek = new string[10];
 
-             
+            int[] iNums = new int[] { 1, 2, 3, 4, 5, 6 };
+            ///deklaráció
+            string[] sFruit = new string[] { "alma", "körte", "banán", "narancs" };
+            Console.WriteLine("iNums első eleme:{0} sFruit első eleme {1}",iNums[0],sFruit[0]);
+            Console.WriteLine("iNums első eleme:" +iNums[0]+ "sFruit első eleme: ", sFruit[0]);
+
+            ///Tipusos listák
+            
+            
         }
     }
 }

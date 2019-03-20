@@ -10,49 +10,80 @@ namespace kpo
     {
         static void Main(string[] args)
         {
-           do
-            
+            //Program: Kő,papír,olló játék programozása!
+            //Írta: Polgár József, 2019.03.06
+            //Megoldandó feladat: 1. Ciklikus program futás mindaddig, amíg a játékos szeretne játszani!
+            Console.WriteLine("*****Ez egy kő papír ollós játék!:*****");
+            Random r = new Random();
+
+            string compChoice = "";
+            string playerChoice = "";
+
+            int compScore = 0;
+            int playerScore = 0;
+
+            bool moreGame = true;
+            do
+            {
+                Console.WriteLine("Ön mit választ? Kő(k),Papír(p),Olló(o)");
                 switch (Console.ReadKey(true).KeyChar)
                 {
-                    case '0':
-                        Console.WriteLine("szám");
+                    case 'k':
+                        playerChoice = "Kő";
                         break;
-                    case '1':
-                        Console.WriteLine("szám"); ;
+                    case 'p':
+                        playerChoice = "Papír";
                         break;
-                    case '2':
-                        Console.WriteLine("szám"); ;
-                        break;
-                    case '3':
-                        Console.WriteLine("szám");
-                        break;
-                    case '4':
-                        Console.WriteLine("szám"); ;
-                        break;
-                    case '5':
-                        Console.WriteLine("szám"); ;
-                        break;
-                    case '6':
-                        Console.WriteLine("szám");
-                        break;
-                    case '7':
-                        Console.WriteLine("szám"); ;
-                        break;
-                    case '8':
-                        Console.WriteLine("szám"); ;
-                        break;
-                    case '9':
-                        Console.WriteLine("szám");
+                    case 'o':
+                        playerChoice = "Olló";
                         break;
 
-                        Console.WriteLine("szám");
+
+                }
+                //4.Feladat: Számítógép választásásnak kérdése
+                switch (r.Next(0, 3))
+                {
+                    case 0:
+                        compChoice = "Kő";
                         break;
-                    default:
-                        Console.WriteLine("egyéb");
+                    case 1:
+                        compChoice = "Papír";
                         break;
-                      
-                }while (true) ;
-             
+                    case 2:
+                        compChoice = "Olló";
+                        break;
+
+
+                }
+                if (
+                    (playerChoice == "Kő" && compChoice == "Papír") ||
+                        (playerChoice == "Papír" && compChoice == "Olló") ||
+                         (playerChoice == "Olló" && compChoice == "Kő")
+                    )
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + playerChoice);
+                    Console.WriteLine("Vesztettél! Állás: Szg: {0} Játékos: {1}", ++compScore, playerScore);
+                }
+                else if (playerChoice == compChoice)
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + playerChoice);
+                    Console.WriteLine("Döntetlen! Állás: Szg: {0} Játékos: {1}", compScore, playerScore);
+                }
+                else
+                {
+                    Console.WriteLine("Számítógép: " + compChoice + "Te: " + playerChoice);
+                    Console.WriteLine("Nyertél! Állás: Szg: {0} Játékos: {1}", compScore, ++playerScore);
+
+                }
+
+                Console.WriteLine("Akarsz még játszani? i/n");
+                if (Console.ReadKey(true).KeyChar == 'n')
+
+
+                {
+                    moreGame = false;
+                }
+            } while (moreGame);
         }
     }
 }

@@ -10,8 +10,10 @@ namespace Animal
     {
         static void Main(string[] args)
         {
-            Cat myCat = new Cat("cirmi");
-            Dog myDog = new Dog("buksi");
+
+            Cat myCat = new Cat("cirmi", true);
+            Dog myDog = new Dog("buksi",false);
+            Cat sonCat = new Cat("kormi", false);
 
             myCat.Sleep();
             myCat.Hunt();
@@ -22,6 +24,9 @@ namespace Animal
 
             myCat.Born(4);
             myCat.Child();
+
+            myDog.Born(2);
+            myDog.Child();
 
             Console.ReadKey();
 

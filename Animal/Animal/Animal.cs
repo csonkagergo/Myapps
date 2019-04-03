@@ -9,22 +9,26 @@ namespace Animal
   abstract class Animal
 {
     protected string Name;
+        protected bool isFemale;
     abstract public void Sleep();
     abstract public void Hunt();
     abstract public void Sound();
-
-}
+        abstract public void Born(int i);
+    }
 
 class Cat : Animal
 {
     private List<Cat> Kids;
-    public Cat(string aName)
+    public Cat(string aName,bool aGender)
     {
         Name = aName;
+            isFemale = aGender;
     }
 
-    internal void Born(int v)
+    internal override void Born(int v)
+
     {
+            if(isFemale )
         Kids = new List<Cat>();
         for (int i = 0; i < v; i++)
         {
@@ -59,8 +63,38 @@ class Cat : Animal
     }
 }
 class Dog : Animal
-{
+         private List<Dog> Kids;
     public Dog(string aName)
+    {
+        Name = aName;
+        isFemale = aGender;
+    }
+
+    internal override void Born(int v)
+    {
+        if (isFemale)
+            Kids = new List<Dog>();
+        for (int i = 0; i < v; i++)
+        {
+            Kids.Add(new Dog("kutya" + i.ToString()true));
+        }
+
+
+    }
+    public void Child()
+    {
+        if (Kids!=null)
+        foreach (var item in Kids)
+        {
+            Console.WriteLine(Name + "s child name" + item.Name);
+
+        }
+    }
+    public Dog()
+    {
+
+        {
+            public Dog(string aName)
     {
         Name = aName;
 

@@ -35,10 +35,41 @@ namespace TipusKonverzio
 
             for (char ch = 'a';ch <= 'z'; ++ch)
             {
-                Console.Write(int)ch + "-> " (int)ch + " ");
+                //Console.Write(int)ch + "-> " (int)ch + " ");
             }
 
-            Console.ReadKey();
+            int[] iTomb = new int[10];
+
+            Random r = new Random();
+            for (int i = 0; i < iTomb.Length; ++i)
+            {
+                Console.Write("kérem az {0}. számot",i);
+                //Console.Write("kérem az" + i +". számot", i);
+                // A kivétel keletkezési helye(exception)
+                try
+                {
+                    iTomb[i] = int.Parse(Console.ReadLine());
+                    iPrev = i;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("hiba." + e.Message);
+                    i = iPrev;
+                }
+                // iTomb[i] = r.Next();
+                //konzolról kérje be a számot
+
+            }
+
+            //kiiratni az iTomb elemeit
+            for (int i = 0; i < iTomb.Length; ++i)
+            {
+                Console.Write(iTomb[i] + " ");
+            }
+
+            //tömb kezdeti értékének megadása
+
+                Console.ReadKey();
         }
     }
 }

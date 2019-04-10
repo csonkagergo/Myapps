@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TipusKonverzio", "TipusKonverzio\TipusKonverzio.csproj", "{F5D2932E-1C21-4F4B-8B07-FB6522F50ABD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5D2932E-1C21-4F4B-8B07-FB6522F50ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D2932E-1C21-4F4B-8B07-FB6522F50ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D2932E-1C21-4F4B-8B07-FB6522F50ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D2932E-1C21-4F4B-8B07-FB6522F50ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30BA22BE-761C-4005-B1DD-0E0DE8087440}
+	EndGlobalSection
+EndGlobal

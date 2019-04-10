@@ -72,12 +72,21 @@ namespace TipusKonverzio
             string[] sArr = new string[] { "banan","mango","alma","korte" };
 
             Array.Sort(sArr);
-            for (int i=0;i< iArr.Length)
+            for (int i=0;i< iArr.Length;i++)
+            {
+                Console.Write(sArr[i] + " ");
+            }
 
                 //tobb dimenzios tomb
+                int[,] matrix = new int[,]
+                { 
+                    { 12, 23, 2 },
+                    { 13, 67, 52 },
+                    { 45, 55, 1 }
+                };
 
 
-                Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }
